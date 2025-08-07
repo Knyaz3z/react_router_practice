@@ -1,0 +1,16 @@
+# Vite build output
+/dist/
+/dist-ssr/
+
+# Node modules
+/node_modules/
+
+# Vite's cache directory (if not within node_modules)
+# You can configure this in vite.config.js with `cacheDir`
+# If you move the cache outside node_modules, you should ignore it.
+# For example, if you set cacheDir: '.vite_cache', then add:
+# /.vite_cache/
+
+# Environment variables (Vite uses dotenv to load these)
+.env
+.env.*.local
