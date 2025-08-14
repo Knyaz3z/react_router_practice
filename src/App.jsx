@@ -2,7 +2,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Cart from "./pages/Cart/Cart";
-import Categories from "./pages/Categories/Categories";
+import Category from "./pages/Categories/Category";
 import NotFound from "./pages/NotFound/NotFound";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Header from "./components/Header/Header";
@@ -23,7 +23,7 @@ import Layout from "./components/Layout";
 //     },
 //     {
 //         path: 'categories',
-//         element: <Categories/>
+//         element: <Category/>
 //     },
 //     {
 //         path: '*',
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         element: <Layout/>,
         children: [
             {
-                path:'',
+                index: true,
                 element: <Home/>
             },
             {
@@ -53,11 +53,11 @@ const router = createBrowserRouter([
                 element: <Cart/>
             },
             {
-                path:'categories',
-                element: <Categories/>
+                path:'category/:categoryId',
+                element: <Category/>
             },
             {
-                path:'product',
+                path:'product/:productId',
                 element: <ProductDetails/>
             },
             {
