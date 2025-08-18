@@ -10,9 +10,19 @@ function ProductDetails() {
 
     return (
         <div>
-            <h1>{currentProduct.name}</h1>
-            <img style={{width: '150px'}} src={currentProduct.img} alt=""/>
-            <h3>{currentProduct.price}$</h3>
+            {
+                currentProduct ? (
+                    <>
+                        <h1>{currentProduct.name}</h1>
+                        <img style={{width: '150px'}} src={currentProduct.img} alt=""/>
+                        <h3>{currentProduct.price}$</h3>
+                    </>
+                ) : (
+                    <p>Product NotFound</p>
+
+                )
+            }
+
         </div>
     )
 }
