@@ -5,9 +5,8 @@ import {useParams} from "react-router-dom";
 function ProductDetails() {
 
     const {productId} = useParams()
-    console.log(productId);
 
-    const currentProduct = products[productId-1]
+    const currentProduct = products.find(p => p.id === Number(productId))
 
     return (
         <div>
