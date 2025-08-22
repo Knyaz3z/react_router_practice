@@ -7,6 +7,9 @@ function Home() {
     return (
         <div>
             <h1>Categories</h1>
+            <Link to={'/category/Electronics'} state={{maxPrice: 600}}>
+                Cheapest electronics
+            </Link>
             <ul style={{display: 'flex'}}>
                 {
                     categories.map((category) => (

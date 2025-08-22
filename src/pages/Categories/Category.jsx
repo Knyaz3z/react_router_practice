@@ -1,10 +1,12 @@
 import './Categories.scss'
 import {products} from "../../data/data";
-import {Link, useParams, useSearchParams} from "react-router-dom";
+import {Link, useLocation, useParams, useSearchParams} from "react-router-dom";
 
 function Category() {
     const {categoryId} = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
+
+    const location = useLocation()
 
     const currentCategoryArray = products.filter(p => p.categoryId === categoryId);
 
@@ -12,7 +14,9 @@ function Category() {
         setSearchParams({maxPrice: e.target.value});
     }
 
-    const priceMaxFilter = searchParams.get("maxPrice");
+    // const priceMaxFilter = searchParams.get("maxPrice");
+
+    const priceMaxFilter = location.state.maxPrice
 
     const filteredProducts = priceMaxFilter ? (
         currentCategoryArray.filter(p => p.price <= Number(priceMaxFilter))
