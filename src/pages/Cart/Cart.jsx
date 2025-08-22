@@ -1,4 +1,5 @@
 import './Cart.scss'
+import {Link} from "react-router-dom";
 
 
 function Cart() {
@@ -7,6 +8,10 @@ function Cart() {
         <div>
 
             Cart
+
+            <Link to={'/thanks'}>
+                <button>Order</button>
+            </Link>
         </div>
     )
 }

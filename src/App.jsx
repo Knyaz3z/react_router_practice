@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout";
+import Thanks from "./pages/Thanks/Thanks";
 
 // const router = createBrowserRouter([
 //     {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
             {
                 path:'product/:productId',
                 element: <ProductDetails/>
+            },
+            {
+                path:'thanks',
+                element: <Thanks/>
             },
             {
                 path:'*',
